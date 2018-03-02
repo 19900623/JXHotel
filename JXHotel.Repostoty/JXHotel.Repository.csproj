@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C66808B9-955B-4F09-9D91-8D6B3442731F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JXHotel.Repository</RootNamespace>
+    <AssemblyName>JXHotel.Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppAccountRepository.cs" />
+    <Compile Include="AppRoleRepository.cs" />
+    <Compile Include="AppUserRepository.cs" />
+    <Compile Include="CustomerRepository.cs" />
+    <Compile Include="CustomerRoleRepository.cs" />
+    <Compile Include="DiscountPromotionRepository.cs" />
+    <Compile Include="HotelCategoryRepository.cs" />
+    <Compile Include="HotelPromotionRepository.cs" />
+    <Compile Include="HotelRepository.cs" />
+    <Compile Include="HotelRoomCategoryRepository.cs" />
+    <Compile Include="HotelUserRepository.cs" />
+    <Compile Include="HotelRoleRepository.cs" />
+    <Compile Include="ModelConfiguration\ReservationTypeCofiguratiion.cs" />
+    <Compile Include="OverGivePromotionRepository.cs" />
+    <Compile Include="OverMinusPromotionRepository.cs" />
+    <Compile Include="ReservationRepository.cs" />
+    <Compile Include="RoleRepository.cs" />
+    <Compile Include="RoomRepository.cs" />
+    <Compile Include="SortByExtension.cs" />
+    <Compile Include="Specification\HotelNameEqualSpecification.cs" />
+    <Compile Include="Specification\HotelPromotionNameEqualSpecification.cs" />
+    <Compile Include="Specification\HotelPromotionStringEqualSpecification.cs" />
+    <Compile Include="Specification\HotelStringEqualSpecification.cs" />
+    <Compile Include="Specification\RoomNameEqualSpecification.cs" />
+    <Compile Include="Specification\RoomStringEqualSpecification.cs" />
+    <Compile Include="Specification\UserEmailEqualsSpecification.cs" />
+    <Compile Include="Specification\UserNameEqualsSpecification.cs" />
+    <Compile Include="Specification\UserPasswordEqualsSpecification.cs" />
+    <Compile Include="Specification\UserStringEqualsSpecification.cs" />
+    <Compile Include="UserRepository.cs" />
+    <Compile Include="JXHotelDbContext.cs" />
+    <Compile Include="EFDbContextInitailizer.cs" />
+    <Compile Include="EntityFrameworkContext.cs" />
+    <Compile Include="EntityFrameworkRepository.cs" />
+    <Compile Include="IEntityFrameworkContext.cs" />
+    <Compile Include="ModelConfiguration\AppAccountTypeConfigurtion.cs" />
+    <Compile Include="ModelConfiguration\AppUserTypeConfiguration.cs" />
+    <Compile Include="ModelConfiguration\CustomerTypeConfiguration.cs" />
+    <Compile Include="ModelConfiguration\HotelCategoryTypeConfigurtion.cs" />
+    <Compile Include="ModelConfiguration\HotelPromotionTypeConfigurtion.cs" />
+    <Compile Include="ModelConfiguration\HotelRoomCategoryTypeConfigurtion.cs" />
+    <Compile Include="ModelConfiguration\HotelTypeConfiguration.cs" />
+    <Compile Include="ModelConfiguration\HotelUserTypeConfiguration.cs" />
+    <Compile Include="ModelConfiguration\RoleTypeConfiguration.cs" />
+    <Compile Include="ModelConfiguration\RoomTypeConfigurtion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\JXHotel.Domain\JXHotel.Domain.csproj">
+      <Project>{c3bcdbf6-b6ba-462f-8b3b-3d2c94c210a6}</Project>
+      <Name>JXHotel.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JXHotel.Infrastructure\JXHotel.Infrastructure.csproj">
+      <Project>{0F35BD51-C795-468F-9F7D-6A06272909C2}</Project>
+      <Name>JXHotel.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
