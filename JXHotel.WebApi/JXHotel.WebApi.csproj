@@ -116,7 +116,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\AppAccountController.cs" />
+    <Compile Include="Controllers\AppUserController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\DiscountPromotionController.cs" />
+    <Compile Include="Controllers\HotelController.cs" />
+    <Compile Include="Controllers\HotelPromotionController.cs" />
+    <Compile Include="Controllers\HotelUserController.cs" />
+    <Compile Include="Controllers\OverMinusPromotionController.cs" />
+    <Compile Include="Controllers\OverGivePromotionController.cs" />
+    <Compile Include="Controllers\ReservationController.cs" />
+    <Compile Include="Controllers\RoomController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -136,9 +146,13 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JXHotel.Domain\JXHotel.Domain.csproj">
-      <Project>{c3bcdbf6-b6ba-462f-8b3b-3d2c94c210a6}</Project>
-      <Name>JXHotel.Domain</Name>
+    <ProjectReference Include="..\JXHotel.Application\JXHotel.Application.csproj">
+      <Project>{ac154166-cb29-4681-833f-2c24060e73a1}</Project>
+      <Name>JXHotel.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JXHotel.DataObject\JXHotel.DataObject.csproj">
+      <Project>{57b1f7e2-a137-4077-9481-9e8125a95d60}</Project>
+      <Name>JXHotel.DataObject</Name>
     </ProjectReference>
     <ProjectReference Include="..\JXHotel.Infrastructure\JXHotel.Infrastructure.csproj">
       <Project>{0f35bd51-c795-468f-9f7d-6a06272909c2}</Project>

@@ -17,7 +17,7 @@ namespace JXHotel.Application.Imp
     /// <summary>
     /// app用户应用层
     /// </summary>
-    public class AppUserService : ApplicationService,IAppUserUserService
+    public class AppUserService : ApplicationService,IAppUserService
     {
 
         private readonly IAppUserRepository appUserRepository;

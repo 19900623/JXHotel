@@ -10,7 +10,7 @@ namespace JXHotel.Application.Contract
     /// <summary>
     /// app用户应用层
     /// </summary>
-   public interface IAppUserUserService : IUserService<AppUserDataObject,AppRoleDataObject>
+   public interface IAppUserService : IUserService<AppUserDataObject,AppRoleDataObject>
     {
 
     }
